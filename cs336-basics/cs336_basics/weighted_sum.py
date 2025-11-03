@@ -65,7 +65,6 @@ class WeightedSumFunc(torch.autograd.Function):
         D, output_dims = x.shape[-1], x.shape[:-1]
 
         input_shape = x.shape
-        # x = rearrange(x, "... d -> (...) d")
 
         ctx.save_for_backward(x, weight)
 
